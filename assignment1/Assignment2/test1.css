@@ -1,0 +1,103 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url('background2.jpg'); /* Replace with your image path */
+    background-size: cover; /* Adjust to 'contain' or other options as needed */
+    background-repeat: no-repeat;
+    background-attachment: fixed; /* Optional, makes the background fixed */
+
+ }
+ .new1 {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+/* Style for the left element in the footer */
+.left-element {
+    margin-left: 10px;
+
+    position:flex;
+    float: left;
+    text-align:left ;
+}
+
+/* Style for the right element in the footer */
+.right-element {
+    margin-left: 50%;
+
+    position: flex;
+    float: right;
+    text-align: right;
+}
+ footer {
+    display: flex;
+    margin-top: auto;
+    background-color: rgb(211, 195, 195);
+    color: #fefefe;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    left: 0;
+  } 
+header {
+    background-color: none; /* Set header background color */
+    padding: 10px; /* Adjust padding as needed */
+    overflow: hidden; /* Clear any floats inside the header */
+}
+
+/* CSS to remove the underline from menu links */
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: inline;
+    margin-left: 20px; /* Adjust spacing between menu items */
+}
+
+a {
+    text-decoration: none; /* Remove underline */
+    color: #333; /* Set link color */
+}
+li a:hover {
+    background-color: #dcd2d2;
+}
+
+/* Float the menu to the right */
+nav {
+    float: right;
+}
+
+/* Style for the left element */
+.left-element {
+    float: left;
+}
+
+/* Style for the right element */
+.right-element {
+    float: right;
+}
+.img {
+    float: left;
+    width:500px;
+    height:500px;
+
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+/* Add more specific styling as needed */
+th {
+    background-color: #f2f2f2;
+}
+
+  
