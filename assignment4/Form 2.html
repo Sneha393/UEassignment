@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+ <head>
+  <title>Feedback</title>
+  <style>
+    label {	float: left;
+			width: 150px;}
+      #container{
+          width: 700px;
+          margin: auto;
+          background-color: beige;
+      } 
+      main{
+          padding: 50px;
+      }
+	  select {
+		float:left;
+		width: 150px;
+	  }
+	  #sourcemsg {
+		padding-left: 300px;
+	  }
+
+  </style>
+ </head>
+ <body>
+ <div id="container">
+	 
+	 <main>
+	 <h2>Feeback</h2>
+	 <h3>Love something? Hate something? Let us know!</h3>
+		 Note : Fields marked with an asterisk(*) are mandatory
+		 <br><br>
+		 <form id ="form"name = "form" method="post" onsubmit ="return validateForm()" >
+			<label>Title*:</label>
+			<input type="radio" name="title" id="miss" value="Miss." required="required"/>Miss
+			<input type="radio" name="title" id="mr" value="Mr." required="required"/>Mr.
+			<input type="radio" name="title" id="mrs" value="Mrs." required="required"/>Mrs.
+			<br><br>
+			<label for="firstName">First Name*:</label>
+			<input type="text" name="firstName" id="firstName" placeholder="First Name"required="required" />
+
+			<br><br>
+			
+
+			<label for="lastName">Last Name*:</label>
+			<input type="text" name="lastName" id="lastName" placeholder="Last Name"required="required" />
+			<br><br>
+			
+
+			<label for="emailId">Email Id*:</label>
+			<input type="text" name="emailId" id="emailId" placeholder="yourname@domain.com"required="required" />
+			<br><br>
+			
+
+			<label for="phoneNumber">Phone Number*:</label>
+			<input type="text" name="phoneNumber" id="phoneNumber" placeholder="xxx-xxx-xxxx" required="required"/>
+			<br><br>
+
+			<label for="streetAddress-1">Street Address 1*</Address>:</label>
+			<input type="text" name="streetAddress-1" id="streetAddress-1" placeholder="Address" required="required"/>
+			<br><br>
+
+
+			<label for="streetAddress-2">Street Address 2</Address>:</label>
+			<input type="text" name="streetAddress-2" id="streetAddress-2" placeholder="Address" />
+			<br><br>
+
+
+			<label for="city">City*</Address>:</label>
+			<input type="text" name="city" id="city" placeholder="Address"required="required" />
+			<br><br>
+
+
+		<label for="state">State*</label>
+    	<select name="state" id="state" required> 
+			<option value="none" selected disabled hidden>Select a state</option>
+			<option value="Arizona">Arizona</option> 
+			<option value="Arkansas">Arkansas</option> 
+			<option value="California">California</option> 
+			<option value="Colorado">Colorado</option> 
+			<option value="Delaware">Delaware</option> 
+			<option value="Florida">Florida</option> 
+			<option value="Georgia">Georgia</option> 
+			<option value="Hawaii">Hawaii</option> 
+			<option value="Idaho">Idaho</option> 
+			<option value="Illinois">Illinois</option> 
+			<option value="Kansas">Kansas</option> 
+			<option value="Kentucky">Kentucky</option> 
+			<option value="Louisiana">Louisiana</option> 
+			<option value="Massachusetts">Massachusetts</option>
+			<option value="Missouri">Missouri</option> 
+			<option value="New Jersey">New Jersey</option> 
+			<option value="New York">New York</option> 
+			<option value="Ohio">Ohio</option> 
+			<option value="Oklahoma">Oklahoma</option> 
+			<option value="Oregon">Oregon</option> 
+			<option value="Pennsylvania">Pennsylvania</option> 
+			<option value="Rhode Island">Rhode Island</option> 
+			<option value="South Carolina">South Carolina</option> 
+			<option value="Texas">Texas</option> 
+			<option value="Utah">Utah</option> 
+			<option value="Virginia">Virginia</option> 
+			<option value="Washington">Washington</option> 
+			<option value="Wyoming">Wyoming</option> 
+		
+	
+    </select>
+	<p id ="statemsg" style ="color: red; display: none;">Select state</p>
+	<br><br>
+			
+            <label for="zipcode" required="required">ZipCode*:</label>
+			<input type="text" name="zipcode" id="zipcode" placeholder="xxxxxx" />
+			<br><br>
+             
+            <label for="zipcode" required="required">How did you hear*:</label>
+			<input type='checkbox' name="source" value="facebook" /> Facebook
+            <input type='checkbox' name="source" value="google" /> Google
+            <input type='checkbox' name="source" value="yelp" /> Yelp 
+			<p id="sourcemsg" style="color: red; display: none;">Select option</p>
+			<br><br> 
+
+
+
+			<label for="rating">Rating*</label> 
+			
+    <select name="rating" id="rating" onchange="createCheckboxes()" required> 
+		<option value="none" selected disabled hidden>Select an Option</option>
+        <option value="1">1</option> 
+        <option value="2">2 </option> 
+        <option value="3">3 </option> 
+        <option value="4">4 </option> 
+		<option value="5">5 </option> 
+		
+    </select>
+	<p id ="ratingmsg" style ="color: red; display: none;">Select rating</p>
+	<br><br>
+	<div id="checkboxesContainer">
+		
+	</div>
+             
+			<label for="comments" required="required">Comments*:</label>
+			<textarea name="text" id="comments" placeholder="Your comments" rows="5" cols="25" required="required"></textarea>
+			<br><br>
+			<input type="Submit" id="submitButton" value = Submit disabled>
+			<input type="Reset">
+			<br><br>
+		 </form>
+	 </main>
+ </div>
+ 
+    
+    <div id="tableContainer" style="display: none;">
+        <table border="1" width ="100%" id="formData">
+            <thead>
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Phone Number</th>
+                    <th>Street Address-1</th>
+                    <th>Street Address-2</th>
+                    <th>City</th>
+                    <th>State</th>
+                    <th>Zipcode</th>
+                    <th>How did You Hear</th>
+                    <th>Rating</th>
+                    <th>Comments</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </div>
+</div>
+ 
+
+<script src="script.js"></script>
+
+
+ </body>
+</html>
