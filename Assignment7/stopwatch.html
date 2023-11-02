@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Stopwatch App</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8x8CXuUcX1AliCphCsl2stKtw8SFppMBEPA&usqp=CAU');
+            background-repeat: no-repeat;
+  background-attachment: fixed;
+            margin: 0;
+            padding: 0;
+            background-size: cover; 
+            background-position: center;
+        }
+
+        .container {
+            width: 60%;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #210a0a;
+            border-radius: 8px;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            font-size: 36px;
+            margin: 20px 0;
+            color: #333;
+        }
+
+        input[type="date"],
+        button {
+            font-size: 16px;
+            padding: 10px 20px;
+            margin: 10px;
+            border: none;
+            border-radius: 4px;
+        }
+
+        input[type="date"] {
+            background-color: #f9f9f9;
+        }
+
+        button {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+            transition: background-color 0.3s;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Stopwatch</h2>
+        <label id="timeLabel">00:00:00</label><br>
+        <input type="date" id="datePicker"><br>
+        <button id="startButton">Start</button>
+        <button id="stopButton">Stop</button>
+        <button id="resetButton">Reset</button>
+    </div>
+    <script src="stopwatchScript.js"></script> 
+    
+</body>
+
+</html>

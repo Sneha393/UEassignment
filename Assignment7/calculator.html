@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Calculation Page</title>
+    <style>
+        .error {
+            color: red;
+            display: block;
+            margin-top: 5px;
+        }
+        /* General Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQsqlT4FUNFpYEpvc--3IFXD86qNJzaAkg-ng&usqp=CAU');
+            background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+    background-size: cover; 
+            background-position: center;
+}
+
+div {
+    max-width: 400px;
+    margin: 50px auto;
+    padding: 20px;
+    background: #4651a4;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    color: #333;
+}
+
+label,
+input,
+button {
+    display: block;
+    margin: 10px 0;
+}
+
+input[type="text"] {
+    width: calc(100% - 22px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+button {
+    width: calc(100% - 22px);
+    padding: 8px;
+    border: none;
+    border-radius: 4px;
+    background-color: #4CAF50;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+.error {
+    color: red;
+    display: block;
+    margin-top: 5px;
+}
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h2>Welcome <span id="loggedInUsername"></span></h2>
+        <label for="number1">Number 1:</label>
+        <input type="text" id="number1">
+        <span class="error" id="number1Error"></span>
+
+        <label for="number2">Number 2:</label>
+        <input type="text" id="number2">
+        <span class="error" id="number2Error"></span>
+
+        <button id="addButton">Add</button>
+        <button id="subtractButton">Subtract</button>
+        <button id="multiplyButton">Multiply</button>
+        <button id="divideButton">Divide</button>
+
+        <label for="result">Result:</label>
+        <input type="text" id="result" disabled>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="Loginpage/calculationScript.js"></script>
+
+</body>
+
+</html>
